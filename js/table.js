@@ -72,7 +72,6 @@ $( "tr:odd" ).hover(
     $( this ).removeClass( "hover" );
     $( this ).css( "color", "black" );
     $( this ).children().first().css( "background-color", "" );
-    $( this ).children().last().css( "background-color", "" );
-
+        $( this ).children().last().css( "background-color", "" );
   }
 );
