@@ -2,10 +2,12 @@
 // This function should be run when the user clicks the ‘Like’ button in the HTML header.
 $(document).ready(function(){
     $("#liveToastBtn").click(function(){
-        // console.log("click on liveToast")
         $("#liveToast").show();
+        $("#liveToast").click(function(){
+          $("#liveToast").hide();
     });
   });
+})
 
 // Make a copy of the ‘Like’ button element in the HTML file and place it directly after
 //  the existing ‘Like’ button element. Change the button text to “I’m Bored” and the element’s ID to “boredBtn”. 

@@ -5,7 +5,7 @@
 // The Table needs to be populated from the 'table.js' file you have created
 
 var array = [
-    ['Car', '4 wheels', '180km/h','17k$'],
+    ['Car', '', '180km/h','17k$'],
     ['Train', '2 wheels', '200km/h', '13m$'],
     ['Bike', '2 wheels', '30km/h', '1k$'],
     ['Airplane', '3 wheels', '350km/h', '43M$'],
@@ -19,12 +19,27 @@ array.forEach(function(row) {
   var tr = tbody.insertRow(); //Create a new row
   const td = document.createElement("td");// Drew the main table node on the document
   const img = document.createElement("img");
+  const i = document.createElement("i");
   row.forEach(function(column) {
     var td = tr.insertCell();
     tr.appendChild(img);
     td.innerText = column; // Take string from placeholder variable and append it to <tr> node
   });
 });
+
+
+let tdIcon1 = document.querySelector("#personalTable > tbody > tr:nth-child(1) > td:nth-child(2)");
+tdIcon1.innerHTML =`<td><i class="bi bi-car-front me-2 text-danger"></i></td>`;
+let tdIcon2 = document.querySelector("#personalTable > tbody > tr:nth-child(2) > td:nth-child(2)");
+tdIcon2.innerHTML =`<td><i class="bi bi-train-front text-gray-900"></i></td>`;
+let tdIcon3 = document.querySelector("#personalTable > tbody > tr:nth-child(3) > td:nth-child(2)")
+tdIcon3.innerHTML = `<td><i class="bi bi-bicycle text-info"></i></td>`;
+let tdIcon4 = document.querySelector("#personalTable > tbody > tr:nth-child(4) > td:nth-child(2)")
+tdIcon4.innerHTML = `<td><i class="bi bi-airplane-engines text-gray-100"></i></td>`;
+let tdIcon5 = document.querySelector("#personalTable > tbody > tr:nth-child(5) > td:nth-child(2)")
+tdIcon5.innerHTML = `<td><i class="bi bi-truck text-primary"></i></td>`;
+
+
 let img = document.getElementsByTagName("img")
 img[1].setAttribute("src", "./img/van-2-150x150.webp")
 img[2].setAttribute("src", "./img/train-6-150x150.webp")
@@ -40,6 +55,12 @@ img[2].setAttribute("id", "img2");
 img[3].setAttribute("id", "img3");
 img[4].setAttribute("id", "img4");
 img[5].setAttribute("id", "img5");
+img[1].setAttribute("height", "120px");
+img[2].setAttribute("height", "120px");
+img[3].setAttribute("height", "120px");
+img[4].setAttribute("height", "120px");
+img[5].setAttribute("height", "120px");
+
 const windowFeatures = "left=100,top=100,width=320,height=320";
 $('#img1').click(function(){
   window.open("./img/van-2-150x150.webp", 'window name', windowFeatures);
