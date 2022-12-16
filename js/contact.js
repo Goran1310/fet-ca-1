@@ -14,7 +14,11 @@ function contact() {
                 $("#contactDetails p[class]").first().replaceWith(`<p class="text-muted">${telephone_number}</p>`);
                 $("p:contains('@')").replaceWith(`<p class=\"text-muted\">${email}</p>`);
                 $("#contactDetails p[class]").last().replaceWith(`<p class="text-muted">${address}</p>`);
-                // $("#contactDetails p:nth-child(2)").css("background-color", "yellow");
+
+                $("#contactDetails > div:nth-child(1)").css("color", "red");
+                $("#contactDetails > div:nth-child(2)").css("color", "red")
+                $("#contactDetails > div:nth-child(3)").css("color", "red")
+
             })
             return;
         } else {

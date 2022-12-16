@@ -14,7 +14,14 @@ var array = [
 
 var table = document.getElementById("#personalTable");
 let tbody = document.getElementsByTagName("tbody")[0];
-tbody.style.border = "thick solid #0000FF";
+tbody.style.border = "thick solid #BAB9B6";
+tbody.style.fontSize = "18px";
+
+let thead = document.querySelector("#personalTable > thead");
+thead.style.border =   "thick solid #5774F8";
+thead.style.fontSize = "20px";
+
+
 array.forEach(function(row) {
   var tr = tbody.insertRow(); //Create a new row
   const td = document.createElement("td");// Drew the main table node on the document
@@ -27,9 +34,8 @@ array.forEach(function(row) {
   });
 });
 
-
 let tdIcon1 = document.querySelector("#personalTable > tbody > tr:nth-child(1) > td:nth-child(2)");
-tdIcon1.innerHTML =`<td><i class="bi bi-car-front me-2 text-danger"></i></td>`;
+tdIcon1.innerHTML =`<td><i class="bi bi-car-front me-2 text-danger "></i></td>`;
 let tdIcon2 = document.querySelector("#personalTable > tbody > tr:nth-child(2) > td:nth-child(2)");
 tdIcon2.innerHTML =`<td><i class="bi bi-train-front text-gray-900"></i></td>`;
 let tdIcon3 = document.querySelector("#personalTable > tbody > tr:nth-child(3) > td:nth-child(2)")
@@ -55,11 +61,11 @@ img[2].setAttribute("id", "img2");
 img[3].setAttribute("id", "img3");
 img[4].setAttribute("id", "img4");
 img[5].setAttribute("id", "img5");
-img[1].setAttribute("height", "120px");
-img[2].setAttribute("height", "120px");
-img[3].setAttribute("height", "120px");
-img[4].setAttribute("height", "120px");
-img[5].setAttribute("height", "120px");
+img[1].setAttribute("height", "100px");
+img[2].setAttribute("height", "100px");
+img[3].setAttribute("height", "100px");
+img[4].setAttribute("height", "100px");
+img[5].setAttribute("height", "100px");
 
 const windowFeatures = "left=100,top=100,width=320,height=320";
 $('#img1').click(function(){
@@ -89,10 +95,14 @@ $( "tr:odd" ).hover(
     $( this ).children().first().css( "background-color", "#D3D3D3" );
     $( this ).children().last().css( "background-color", "#D3D3D3" );
     $( this ).css( "color", "blue" );
+    $(document.querySelector("#img1")).css("border-radius", "50%");
+    $(document.querySelector("#img3")).css("border-radius", "50%");
+    $(document.querySelector("#img5")).css("border-radius", "50%");
   }, function() {
     $( this ).removeClass( "hover" );
     $( this ).css( "color", "black" );
     $( this ).children().first().css( "background-color", "" );
-        $( this ).children().last().css( "background-color", "" );
+    $( this ).children().last().css( "background-color", "" );
   }
-);
+  );
+  $(document.querySelector("#personalTable > tbody")).css("vertical-align", "baseline");

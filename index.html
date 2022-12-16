@@ -19,6 +19,7 @@
 <style>
   .pClass {
     font-size: 120%;
+    color: red;
   }
 </style>
 
@@ -78,7 +79,7 @@
             <img src="img/coding.png" class="img-fluid border-0
   rounded-pill" alt="Profile Picture">
           </div>
-          <div class="col-lg-6 mt-5 mt-lg-0" onclick="myFunction()">
+          <div class="col-lg-6 mt-5 mt-lg-0" onclick="myFunction()" ondblclick="myFunction1()">
             <h2>About Me</h2>
 
             <h3>Hello! <span style="color:#E96F85;">I am Goran -
@@ -116,7 +117,6 @@
               <tbody>
               </tbody>
             </table>
-            <i class="bi bi-car-front me-2 text-danger 5.5em"></i>
           </div>
     </section>
     <section id="favquotes">
@@ -224,19 +224,7 @@
             <div class="col-5 text-end">
               <div class="checkbox">
                 <input id="accessToggle" type="checkbox" data-toggle="toggle" data-offstyle="secondary">
-                <pre></pre>
-                <input id="accessToggle" type="checkbox" data-toggle="toggle" data-offstyle="secondary" name='opt2' id='opt2' value='1' class='toggleswitch'>
-                
                 <label>Increased font size</label>
-              <!-- --------- -->
-                <label for='opt1'>Option 1</label>
-                <input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
-
-                <!-- Switch is OFF -->
-                <label for='opt2'>Option 2 (off by default)</label>
-                <input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' />
-              <!-- --------- -->
-
               </div>
             </div>
         </div>
